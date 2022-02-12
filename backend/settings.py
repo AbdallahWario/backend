@@ -70,9 +70,8 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 
-# CSRF_TRUSTED_ORIGINS = [
-#     'localhost',
-# ]
+CSRF_TRUSTED_ORIGINS = ["*"]
+CORS_ORIGIN_ALLOW_ALL = True   
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
