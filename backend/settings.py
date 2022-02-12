@@ -61,18 +61,18 @@ MIDDLEWARE = [
 ]
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+# ]
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000","https://isiolotimesfrontend.herokuapp.com","http://isiolotimesfrontend.herokuapp.com",
+    "http://localhost:3000","https://isiolotimesfrontend.herokuapp.com","http://isiolotimesfrontend.herokuapp.com"
 ]
 
 
-CSRF_TRUSTED_ORIGINS = [
-    'localhost',
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     'localhost',
+# ]
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
