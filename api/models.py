@@ -26,6 +26,7 @@ class Post(models.Model):
     url = models.SlugField(max_length=255, unique=True,blank=True)
     img = models.CharField(max_length=2500)
     created_date = models.DateField(auto_now_add=True)
+    author = models.CharField(max_length=255,default="Wario Wario")
     likes = models.ManyToManyField(User,blank=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL,null=True)
     def save(self, *args, **kwargs):
@@ -37,7 +38,7 @@ class Post(models.Model):
 
 class Comments(models.Model):
     username = models.CharField(max_length=255)
-    text = models.TextField(max_length=1000)
+    text = models.TextField(max_length=1000)   
     user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True)
     post = models.ForeignKey(Post, on_delete=models.CASCADE,null=True)
     created_date = models.DateField(auto_now_add=True)
