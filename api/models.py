@@ -26,7 +26,7 @@ class Post(models.Model):
     url = models.SlugField(max_length=255, unique=True,blank=True)
     img = models.CharField(max_length=2500)
     created_date = models.DateField(auto_now_add=True)
-    author = models.CharField(max_length=255,default="Wario Wario")
+    author = models.CharField(max_length=255, default="Abdirahman Wako")
     likes = models.ManyToManyField(User,blank=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL,null=True)
     def save(self, *args, **kwargs):

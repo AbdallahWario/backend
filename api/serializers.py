@@ -23,7 +23,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Post
-        fields = ('id','title', 'description', 'url','img','created_date','likes','category')
+        fields = ('id','title', 'description', 'url','img','created_date','author','likes','category')
 
     def create(self, validated_data):
         return models.Post.objects.create(**validated_data)
