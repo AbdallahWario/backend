@@ -16,7 +16,7 @@ from django.views.decorators.csrf import requires_csrf_token
 # Create your views here.
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, "index.html/admin")
 
 @api_view(['GET','POST'])
 def post_list(request):
